@@ -4,7 +4,7 @@ rm -f networkStructure.txt
 
 /share/shared/Internetworking/showcabling Sacchetti-IntNetw OffTech > networkStructure.txt
 
-git clone https://github.com/sacca97/OffTech.git
+#git clone https://github.com/sacca97/OffTech.git
 
 ssh NWworkstation1.Sacchetti-IntNetw.OffTech "sudo mkdir affettati"
 
