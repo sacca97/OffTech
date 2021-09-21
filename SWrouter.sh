@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo -i
-
 ifconfig $1 3.5.7.18 netmask 255.255.255.248
 ifconfig $2 10.0.0.1 netmask 255.255.255.248
 
