@@ -21,7 +21,7 @@ for s in res:
 
 
 for iFace in iFaceList:
-    server = "{}".format(iFace)
+    server = "{}.Sacchetti-IntNetw.OffTech".format(iFace)
     if len(iFaceList[iFace]) == 1:
         command = "sudo sh OffTech/{}.sh {}".format(iFace, iFaceList.get(iFace)[0])
     else:
