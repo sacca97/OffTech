@@ -11,9 +11,9 @@ iFaceList = {}
 
 for s in res:
     for x in s:
-        t = x.strip().split(" ")
-        if len(t) == 0:
+        if x == "":
             continue
+        t = x.strip().split(" ")
         if t[0] in iFaceList:
             iFaceList[t[0]].append(t[1])
         else:
