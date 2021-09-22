@@ -24,6 +24,6 @@ for iFace in iFaceList:
     if len(iFaceList[iFace]) == 1:
         secondCommand = "{}.Sacchetti-IntNetw.OffTech \"sudo sh OffTech/{}.sh {}\"".format(iFace, iFace, iFaceList.get(iFace)[0])
     else:
-        secondCommand = "{}.Sacchetti-IntNetw.OffTech \"sudo sh OffTech/{}.sh {} {}\"".format(iFace, iFaceList.get(iFace)[0], iFaceList.get(iFace)[1])
+        secondCommand = "{}.Sacchetti-IntNetw.OffTech \"sudo sh OffTech/{}.sh {} {}\"".format(iFace, iFace, iFaceList.get(iFace)[0], iFaceList.get(iFace)[1])
     print("ssh " +secondCommand)
     subprocess.call(["ssh",secondCommand])
