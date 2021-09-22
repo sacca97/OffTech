@@ -1,6 +1,6 @@
 import subprocess
 
-subprocess.call(["sh", "setup.sh"])
+#subprocess.call(["sh", "setup.sh"])
 
 lines = open ("topology.txt", "r").readlines()
 
