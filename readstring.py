@@ -1,5 +1,7 @@
 import subprocess
 
+subprocess.call(["sh", "setup.sh"])
+
 lines = open ("topology.txt", "r").readlines()
 
 res = [str.strip().split("<- is \"wired\" to ->") for str in lines]
