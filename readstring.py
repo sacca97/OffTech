@@ -5,7 +5,7 @@ subprocess.call(["sh", "setup.sh"])
 lines = open ("topology.txt", "r").readlines()
 
 res = [str.strip().split("<- is \"wired\" to ->") for str in lines]
-
+print(res)
 iFaceList = {}
 
 for s in res:
@@ -14,7 +14,6 @@ for s in res:
         if t[0] in iFaceList:
             iFaceList[t[0]].append(t[1])
         else:
-            print(iFaceList)
             iFaceList[t[0]] = [t[1]]
 
 
