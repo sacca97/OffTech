@@ -1,10 +1,6 @@
 import subprocess
 
-#subprocess.call(["sh", "setup.sh"])
-
 lines = open ("topology.txt", "r").readlines()
-
-
 
 res = [str.strip().split("<- is \"wired\" to ->") for str in lines]
 iFaceList = {}
@@ -22,9 +18,8 @@ for s in res:
 
 for iFace in iFaceList:
     server = "{}.Sacchetti-IntNetw.OffTech".format(iFace)
-    if len(iFaceList[iFace]) == 1:
-        command = "sudo sh OffTech/{}.sh {}".format(iFace, iFaceList.get(iFace)[0])
-    else:
-        command = "sudo sh OffTech/{}.sh {} {}".format(iFace, iFaceList.get(iFace)[0], iFaceList.get(iFace)[1])
+    command = "sudo sh OffTech/{}.sh {} ".format(iFace, iFaceList.get(iFace)[0])
+    if len(iFaceList[iFace]) != 1:
+        command += iFaceList.get(iFace)[1]
     
     subprocess.check_output(["ssh",server, command])
