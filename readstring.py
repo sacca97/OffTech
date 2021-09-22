@@ -23,8 +23,8 @@ for s in res:
 for iFace in iFaceList:
     firstCommand = "ssh {}.Sacchetti-IntNetw.OffTech".format(iFace) 
     if len(iFaceList[iFace]) == 1:
-        secondCommand = "sudo sh OffTech/{}.sh {}".format(iFace, iFaceList.get(iFace)[0])
+        secondCommand = "\"sudo sh OffTech/{}.sh {}\"".format(iFace, iFaceList.get(iFace)[0])
     else:
-        secondCommand = "sudo sh OffTech/{}.sh {} {}".format(iFace, iFaceList.get(iFace)[0], iFaceList.get(iFace)[1])
-    print(secondCommand)
-    #subprocess.call([firstCommand,secondCommand])
+        secondCommand = "\"sudo sh OffTech/{}.sh {} {}\"".format(iFace, iFaceList.get(iFace)[0], iFaceList.get(iFace)[1])
+    print(firstCommand +" " +secondCommand)
+    subprocess.call([firstCommand,secondCommand])
