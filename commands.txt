@@ -1,0 +1,15 @@
+SWworkstation1.Sacchetti-IntNetw.OffTech
+
+NWworkstation1.Sacchetti-IntNetw.OffTech
+
+NWrouter.Sacchetti-IntNetw.OffTech
+
+SWrouter.Sacchetti-IntNetw.OffTech
+
+ISrouter.Sacchetti-IntNetw.OffTech
+
+#show nat rules
+iptables -t nat -L 
+
+#show ipv4 rules
+sudo iptables -S
